@@ -21,21 +21,28 @@ public class Player : MonoBehaviour {
     float trueSpeed;
     float speedCap = 10f;
 
+    public bool playerCanMove;
 
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
+
+    }
+
+    // Use this for initialization
+    void Start () {
         // Get access to the rigidbody
         rigidBody = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Movement();
-        Jump();
-        if(Input.GetKey(p))
+        if (!playerCanMove)
         {
-            print(rigidBody.gravityScale);
+            Movement();
+            Jump();
         }
+
+
 	}
 
     private void FixedUpdate()

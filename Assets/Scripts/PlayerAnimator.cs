@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour {
 
+    bool walkingCoroutineRunning;
+
     bool grounded;
     SpriteRenderer SpriteRenderer;
 
@@ -27,18 +29,24 @@ public class PlayerAnimator : MonoBehaviour {
             SpriteRenderer.flipX = true;
         }
 
-        if (GetComponent<Player>().direction == dir.none)
+        if (!grounded)
+        {
+            StartCoroutine(Jumping());
+        }
+        else if (GetComponent<Player>().direction == dir.none)
         {
             SpriteRenderer.sprite = sprites[0];
         }
         else if(grounded)
         {
-            StartCoroutine(Walking());
+            if(!walkingCoroutineRunning)
+            {
+                StartCoroutine(Walking());
+                walkingCoroutineRunning = true;
+            }
+
         }
-        else if(!grounded)
-        {
-            StartCoroutine(Jumping());
-        }
+        
 	}
 
     IEnumerator Walking()
@@ -48,7 +56,11 @@ public class PlayerAnimator : MonoBehaviour {
             for(int i = 1; i < 6; i++)
             {
                 if(!grounded || GetComponent<Player>().direction == dir.none)
+                {
+                    walkingCoroutineRunning = false;
                     yield break;
+                }
+
                 SpriteRenderer.sprite = sprites[i];
                 yield return new WaitForSeconds(.1f);
             }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlackHoleCenter : MonoBehaviour {
+public class KillArea : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

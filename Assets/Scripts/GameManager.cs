@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour {
     // Access to the player
     [SerializeField] GameObject player;
 
-    [SerializeField] GameObject restartText;
+    [SerializeField] GameObject canvas;
+
+    GameObject restartText;
 
     [SerializeField] List<string> scenes;
 
@@ -37,8 +39,7 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        restartText.SetActive(false);
-        player = GameObject.FindGameObjectWithTag("Player");
+        StartCoroutine(Wait());
     }
 	
 	// Update is called once per frame
@@ -65,6 +66,13 @@ public class GameManager : MonoBehaviour {
 
     }
 
+    // This gets info from the player to tell the GM the next level was loaded
+    // Because I'm an idiot and dont know how to do this correctly
+    public void NewLevelLoaded()
+    {
+        StartCoroutine(Wait());
+    }
+
     // We wait a frame here, because unity sucks and it takes a little while to spawn the player
     // so if we don't wait it's fucking null, and that's really dumb, so here's my stupid coroutine
     // instead that literally just waits one frame, and does nothing else.
@@ -72,10 +80,11 @@ public class GameManager : MonoBehaviour {
     {
         yield return null;
         player = GameObject.FindGameObjectWithTag("Player");
-        restartText = GameObject.FindGameObjectWithTag("RestartText");
+        canvas = GameObject.FindGameObjectWithTag("Canvas");
+        restartText = canvas.transform.GetChild(0).gameObject;
         restartText.SetActive(false);
+        StartCoroutine(NextLevelCutscene());
     }
-
 
     // This is how you load the next level
     public void LoadNextLevel()
@@ -84,11 +93,25 @@ public class GameManager : MonoBehaviour {
         {
             currentScene++;
             SceneManager.LoadScene(currentScene);
-            Wait();
+            StartCoroutine(Wait());
         }
         else
         {
             print("you fucked up dude");
         }
+    }
+
+    IEnumerator NextLevelCutscene()
+    {
+        player.SetActive(false);
+
+        // Play animation here
+        for(int i = 0; i < 8; i++)
+        {
+            yield return null;
+        }
+        yield return null;
+
+        player.SetActive(true);
     }
 }

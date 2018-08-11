@@ -60,12 +60,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BlackHole.cs" />
-    <Compile Include="Assets\Scripts\BlackHoleCenter.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scripts\Galaxy.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Goal.cs" />
+    <Compile Include="Assets\Scripts\KillArea.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimator.cs" />
+    <Compile Include="Assets\Scripts\Saw.cs" />
     <Compile Include="Assets\Scripts\SpaceBall.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/Unity Projects/LD42/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
