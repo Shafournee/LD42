@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\PlayerAnimator.cs" />
     <Compile Include="Assets\Scripts\Saw.cs" />
     <Compile Include="Assets\Scripts\SpaceBall.cs" />
+    <Compile Include="Assets\Scripts\TitleScreen.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/Unity Projects/LD42/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

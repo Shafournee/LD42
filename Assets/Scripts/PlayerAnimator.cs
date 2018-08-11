@@ -18,6 +18,8 @@ public class PlayerAnimator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        print(walkingCoroutineRunning);
+
         grounded = GetComponent<Player>().PlayerCanJump();
 
         if (GetComponent<Player>().direction == dir.left)
@@ -41,8 +43,8 @@ public class PlayerAnimator : MonoBehaviour {
         {
             if(!walkingCoroutineRunning)
             {
-                StartCoroutine(Walking());
                 walkingCoroutineRunning = true;
+                StartCoroutine(Walking());
             }
 
         }
@@ -51,7 +53,7 @@ public class PlayerAnimator : MonoBehaviour {
 
     IEnumerator Walking()
     {
-        while(grounded && GetComponent<Player>().direction != dir.none)
+        while(true)
         {
             for(int i = 1; i < 6; i++)
             {

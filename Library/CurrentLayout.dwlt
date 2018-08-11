@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 988
-  m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 681, y: 342}
+  m_MaxSize: {x: 12006, y: 8042}
   vertical: 0
-  controlID: 95
+  controlID: 98
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 988
-  m_MinSize: {x: 406, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
+  m_MinSize: {x: 406, y: 342}
+  m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
-  controlID: 12
+  controlID: 33
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -228,14 +228,14 @@ MonoBehaviour:
     y: 596
     width: 1531
     height: 392
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -254,8 +254,8 @@ MonoBehaviour:
     y: 0
     width: 389
     height: 988
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -363,20 +363,20 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f27f0000
-    m_LastClickedID: 32754
-    m_ExpandedIDs: e071f4ffdc74f4ffdc52f9ffcc9ffbff10a5fbffa0b4fbff50b2fdff3afffdff506efeffc477feffee77fefffe77feff047cfeff3e7dfeff488cfeff828cfeffaa93feffce93feffe89cfeff0c9dfeffbe9efeff46b7feff6ab7feff66cffeffbae2feff3006ffff6a0fffff7415ffff5017fffff0fbfffff4ffffff00000000903800005e3e0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 005dfcff625dfcffa85efcff5a5ffcff5e5ffcffb8d7fcff2cd8fcff76d9fcff2cdafcff34dafcffb4eefcff1ceffcff62f0fcff14f1fcff18f1fcff9e02fdff4e08fdffe20ffdffeeccfdff24cefdff28d7fdffaabdfeff727afffffad1ffff0af0ffffd2f7fffff0fbffff000000005c2f00006e2f000020520000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Saw
-      m_OriginalName: Saw
+      m_Name: Button (2)
+      m_OriginalName: Button (2)
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -281440
+      m_UserData: 12174
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -384,7 +384,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
-  - SampleScene
+  - TitleScreen
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -415,19 +415,19 @@ MonoBehaviour:
     height: 575
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 6968.480229390765
+  lastFramingTime: 70.2859524503038
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.40071252, y: 0.16458294, z: -0.1875}
+    m_Target: {x: 7.685479, y: 3.9237707, z: 5.484375}
     speed: 2
-    m_Value: {x: 0.40071252, y: 0.16458294, z: -0.1875}
-  m_RenderMode: 31
+    m_Value: {x: 7.685479, y: 3.9237707, z: 5.484375}
+  m_RenderMode: 0
   m_CameraMode:
-    drawMode: 31
-    name: Sprite Mask
-    section: Miscellaneous
+    drawMode: 0
+    name: Shaded
+    section: Shading Mode
   m_ValidateTrueMetals: 0
   m_SceneViewState:
     showFog: 1
@@ -454,9 +454,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 25.239094
+    m_Target: 82.18237
     speed: 2
-    m_Value: 25.239094
+    m_Value: 82.18237
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -547,20 +547,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Unity Projects\LD42
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f6080000
-    m_LastClickedID: 2294
-    m_ExpandedIDs: 00000000ca080000e20a000000ca9a3bffffff7f
+    m_SelectedIDs: 04090000
+    m_LastClickedID: 2308
+    m_ExpandedIDs: 00000000ce0800000c0b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -588,7 +588,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ca080000
+    m_ExpandedIDs: 00000000ce0800000c0b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

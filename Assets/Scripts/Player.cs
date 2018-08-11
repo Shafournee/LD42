@@ -23,6 +23,8 @@ public class Player : MonoBehaviour {
 
     public bool playerCanMove;
 
+    public bool playerIsJumping;
+
     private void Awake()
     {
 
@@ -56,17 +58,23 @@ public class Player : MonoBehaviour {
             trueSpeed = airSpeed;
         }
         // Adds speed to the player
-        if(direction == dir.left)
+        if ((direction == dir.left && rigidBody.velocity.x > 0 || direction == dir.right && rigidBody.velocity.x < 0) && PlayerCanJump())
+        {
+            print("xd");
+            rigidBody.velocity = new Vector2(0f, rigidBody.velocity.y);
+        }
+        else if (direction == dir.left)
         {
             rigidBody.AddForce(new Vector2(-trueSpeed, 0f));
         }
-        else if(direction == dir.right)
+        else if (direction == dir.right)
         {
             rigidBody.AddForce(new Vector2(trueSpeed, 0f));
         }
-        else if(direction == dir.none)
+        // If you aren't moving, or you're going from one direction to another, stop completely first
+        else if (direction == dir.none)
         {
-            rigidBody.AddForce(new Vector2(-rigidBody.velocity.x, 0f));
+            rigidBody.velocity = new Vector2(0f, rigidBody.velocity.y);
         }
 
         // Cap the speed of the player
@@ -101,8 +109,18 @@ public class Player : MonoBehaviour {
         // If player can jump, and on space down, add the force
         if(Input.GetKey(space) && PlayerCanJump())
         {
-            rigidBody.AddForce(new Vector2(0f, 400f));
+            if(!playerIsJumping)
+                StartCoroutine(Jumping());
         }
+    }
+
+    IEnumerator Jumping()
+    {
+        playerIsJumping = true;
+        yield return new WaitForFixedUpdate();
+        rigidBody.AddForce(new Vector2(0f, 400f));
+        yield return new WaitForFixedUpdate();
+        playerIsJumping = false;
     }
 
     public bool PlayerCanJump()

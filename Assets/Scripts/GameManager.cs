@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField] List<string> scenes;
 
-    int currentScene = 0;
+    int currentScene = 1;
 
     private void Awake()
     {
