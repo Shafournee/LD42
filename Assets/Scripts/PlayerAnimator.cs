@@ -14,22 +14,23 @@ public class PlayerAnimator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         SpriteRenderer = GetComponent<SpriteRenderer>();
+        StartCoroutine(Wait());
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        print(walkingCoroutineRunning);
 
         grounded = GetComponent<Player>().PlayerCanJump();
 
-        if (GetComponent<Player>().direction == dir.left)
-        {
-            SpriteRenderer.flipX = false;
-        }
-        else if (GetComponent<Player>().direction == dir.right)
+        if (GetComponent<Player>().direction == dir.right)
         {
             SpriteRenderer.flipX = true;
         }
+        else if (GetComponent<Player>().direction == dir.left)
+        {
+            SpriteRenderer.flipX = false;
+        }
+        
 
         if (!grounded)
         {
@@ -81,5 +82,11 @@ public class PlayerAnimator : MonoBehaviour {
                 yield return new WaitForSeconds(.1f);
             }
         }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return null;
+        SpriteRenderer.flipX = true;
     }
 }

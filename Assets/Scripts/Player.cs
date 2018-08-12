@@ -60,7 +60,6 @@ public class Player : MonoBehaviour {
         // Adds speed to the player
         if ((direction == dir.left && rigidBody.velocity.x > 0 || direction == dir.right && rigidBody.velocity.x < 0) && PlayerCanJump())
         {
-            print("xd");
             rigidBody.velocity = new Vector2(0f, rigidBody.velocity.y);
         }
         else if (direction == dir.left)

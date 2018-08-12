@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+    [SerializeField] List<Sprite> shipSprites;
+
+    bool shipIsMoving;
+
+    [SerializeField] GameObject ship;
+
     // Static instance of GameManager which allows it to be accessed by any other script.
     public static GameManager instance = null;
 
@@ -39,7 +45,7 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        StartCoroutine(Wait());
+        StartCoroutine(StartingCutscene());
     }
 	
 	// Update is called once per frame
@@ -83,7 +89,6 @@ public class GameManager : MonoBehaviour {
         canvas = GameObject.FindGameObjectWithTag("Canvas");
         restartText = canvas.transform.GetChild(0).gameObject;
         restartText.SetActive(false);
-        StartCoroutine(NextLevelCutscene());
     }
 
     // This is how you load the next level
@@ -93,7 +98,7 @@ public class GameManager : MonoBehaviour {
         {
             currentScene++;
             SceneManager.LoadScene(currentScene);
-            StartCoroutine(Wait());
+            StartCoroutine(StartingCutscene());
         }
         else
         {
@@ -101,17 +106,102 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    IEnumerator NextLevelCutscene()
+    // This plays the cutscene for when a level starts for the first time
+    IEnumerator StartingCutscene()
     {
+        StartCoroutine(Wait());
+        yield return null;
+        Vector3 playerPos = player.transform.position;
+        playerPos = new Vector2(playerPos.x, playerPos.y + .7f);
+        ship.transform.position = new Vector2(playerPos.x - 13f, playerPos.y + 2f);
         player.SetActive(false);
-
-        // Play animation here
-        for(int i = 0; i < 8; i++)
+        shipIsMoving = true;
+        int z = 16;
+        while (shipIsMoving)
         {
+            // Set ship sprite
+            ship.GetComponent<SpriteRenderer>().sprite = shipSprites[z];
+
             yield return null;
+
+            z++;
+
+            if(z > 19)
+            {
+                z = 16;
+            }
+
+            // Move ship to starting position
+            float step = Time.deltaTime * 9f;
+            ship.transform.position = Vector3.MoveTowards(ship.transform.position, playerPos, step);
+            yield return null;
+            // Check if ship is in starting pos, if so break out of loop
+            if(ship.transform.position == playerPos)
+            {
+                shipIsMoving = false;
+            }
+        }
+
+        // Deploy landing gear
+        for(int i = 15; i > -1; i--)
+        {
+            ship.GetComponent<SpriteRenderer>().sprite = shipSprites[i];
+            yield return new WaitForSeconds(.1f);
         }
         yield return null;
 
         player.SetActive(true);
+    }
+
+    public void CallEndingCutscene(Vector2 goalPos)
+    {
+        StartCoroutine(EndingCutscene(goalPos));
+    }
+
+    public IEnumerator EndingCutscene(Vector2 goalPos)
+    {
+        goalPos = new Vector2(goalPos.x, goalPos.y);
+        ship.transform.position = goalPos;
+        player.SetActive(false);
+        ship.SetActive(true);
+
+        // Remove landing gear
+        for (int i = 0; i < 15; i++)
+        {
+            ship.GetComponent<SpriteRenderer>().sprite = shipSprites[i];
+            yield return new WaitForSeconds(.1f);
+        }
+        yield return null;
+
+
+        Vector3 finalPos = new Vector3(goalPos.x + 13f, goalPos.y + 2f);
+
+        shipIsMoving = true;
+        int z = 16;
+        while (shipIsMoving)
+        {
+            // Set ship sprite
+            ship.GetComponent<SpriteRenderer>().sprite = shipSprites[z];
+
+            yield return null;
+
+            z++;
+
+            if (z > 19)
+            {
+                z = 16;
+            }
+
+            // Move ship to starting position
+            float step = Time.deltaTime * 9f;
+            ship.transform.position = Vector3.MoveTowards(ship.transform.position, finalPos, step);
+            yield return null;
+            // Check if ship is in starting pos, if so break out of loop
+            if (ship.transform.position == finalPos)
+            {
+                shipIsMoving = false;
+            }
+        }
+        LoadNextLevel();
     }
 }
