@@ -11,19 +11,33 @@ public class Player : MonoBehaviour {
     KeyCode left = KeyCode.A;
     KeyCode right = KeyCode.D;
     KeyCode space = KeyCode.Space;
+    KeyCode down = KeyCode.S;
 
     KeyCode p = KeyCode.P;
 
     public dir direction;
 
-    float speed = 15f;
+    //Player speed on ground
+    float speed = 20f;
+    //Player speed in air
     float airSpeed = 5f;
+    //Variable for trackin speed, whether on ground or in air
     float trueSpeed;
+    //Variable for capping player speed
     float speedCap = 10f;
+    //The jump speed of the player
+    float jumpSpeed;
+    //Modifiers for jump speed
+    float spaceJumpSpeed = 400f;
+    float earthJumpSpeed = 550f;
 
     public bool playerCanMove;
 
     public bool playerIsJumping;
+
+    bool isInSpace;
+
+    bool fastFall;
 
     private void Awake()
     {
@@ -34,7 +48,9 @@ public class Player : MonoBehaviour {
     void Start () {
         // Get access to the rigidbody
         rigidBody = GetComponent<Rigidbody2D>();
-	}
+        
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -42,6 +58,27 @@ public class Player : MonoBehaviour {
         {
             Movement();
             Jump();
+        }
+
+        //Check if the player moves from space to earth too quickly, if so modify the gravity appropriately
+        if(jumpSpeed == spaceJumpSpeed && !isInSpace || jumpSpeed == earthJumpSpeed && isInSpace)
+        {
+            StartCoroutine(ModifyGravity());
+        }
+
+        if(Input.GetKey(down))
+        {
+            fastFall = true;
+        }
+        else
+        {
+            fastFall = false;
+        }
+
+        if(Input.GetKeyDown(p))
+        {
+            print(jumpSpeed);
+            print(rigidBody.gravityScale);
         }
 
 
@@ -85,6 +122,11 @@ public class Player : MonoBehaviour {
         {
             rigidBody.velocity = new Vector2(-speedCap, rigidBody.velocity.y);
         }
+
+        if(fastFall)
+        {
+            rigidBody.AddForce(new Vector2(0f, -20f));
+        }
     }
 
     void Movement()
@@ -106,10 +148,71 @@ public class Player : MonoBehaviour {
     void Jump()
     {
         // If player can jump, and on space down, add the force
-        if(Input.GetKey(space) && PlayerCanJump())
+        if(Input.GetKeyDown(space) && PlayerCanJump())
         {
             if(!playerIsJumping)
                 StartCoroutine(Jumping());
+        }
+    }
+
+    public void CheckJumpSpeed(bool inSpace)
+    {
+        isInSpace = inSpace;
+        StartCoroutine(ChangeJumpSpeed(inSpace));
+    }
+
+    IEnumerator ChangeJumpSpeed(bool inSpace)
+    {
+        yield return new WaitForSeconds(.1f);
+        if (inSpace)
+        {
+            // Space Jump Speed
+            jumpSpeed = spaceJumpSpeed;
+        }
+        else
+        {
+            // Earth Jump Speed
+            jumpSpeed = earthJumpSpeed;
+        }
+    }
+
+    // If the player jumps but immediately exist the gravity they were in before, give them a modified gravity
+    // For a bit, so that it doesn't feel like they get no height when going from space to earth, or too much going from
+    // Earth to space
+    IEnumerator ModifyGravity()
+    {
+        if (jumpSpeed == spaceJumpSpeed && !isInSpace)
+        {
+            GetComponent<Rigidbody2D>().gravityScale = 1.7f;
+        }
+        else if (jumpSpeed == earthJumpSpeed && isInSpace)
+        {
+            GetComponent<Rigidbody2D>().gravityScale = 1.4f;
+        }
+        for (int i = 0; i < 60; i++)
+        {
+            yield return null;
+            if (PlayerCanJump())
+            {
+                if(isInSpace)
+                {
+                    GetComponent<Rigidbody2D>().gravityScale = .5f;
+                }
+                else
+                {
+                    GetComponent<Rigidbody2D>().gravityScale = 1.8f;
+                }
+                yield break;
+            }
+
+        }
+        if (isInSpace)
+        {
+            GetComponent<Rigidbody2D>().gravityScale = .5f;
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().gravityScale = 1.8f;
         }
     }
 
@@ -117,15 +220,28 @@ public class Player : MonoBehaviour {
     {
         playerIsJumping = true;
         yield return new WaitForFixedUpdate();
-        rigidBody.AddForce(new Vector2(0f, 400f));
+        rigidBody.AddForce(new Vector2(0f, jumpSpeed));
         yield return new WaitForFixedUpdate();
         playerIsJumping = false;
     }
 
     public bool PlayerCanJump()
     {
-        Vector2 origin = new Vector2(transform.position.x, GetComponent<BoxCollider2D>().bounds.min.y - .01f);
-        return Physics2D.Raycast(origin, Vector2.down, .01f);
+        // Raycast from left and right of player collision box, so that players can stand on edges and still are able to jump
+        bool left;
+        bool right;
+        Vector2 rayLeft = new Vector2(GetComponent<BoxCollider2D>().bounds.min.x - .01f, GetComponent<BoxCollider2D>().bounds.min.y - .01f);
+        left =  Physics2D.Raycast(rayLeft, Vector2.down, .1f);
+        Vector2 rayRight = new Vector2(GetComponent<BoxCollider2D>().bounds.max.x + .01f, GetComponent<BoxCollider2D>().bounds.min.y - .01f);
+        right = Physics2D.Raycast(rayRight, Vector2.down, .1f);
+        if(left || right)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 

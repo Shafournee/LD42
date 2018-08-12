@@ -1,0 +1,755 @@
+fileFormatVersion: 2
+guid: a6b0d06066a6e044aba95b1dad8d5576
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Enviro_Tiles 1_0
+    21300002: Enviro_Tiles 1_1
+    21300004: Enviro_Tiles 1_2
+    21300006: Enviro_Tiles 1_3
+    21300008: Enviro_Tiles 1_4
+    21300010: Enviro_Tiles 1_5
+    21300012: Enviro_Tiles 1_6
+    21300014: Enviro_Tiles 1_7
+    21300016: Enviro_Tiles 1_8
+    21300018: Enviro_Tiles 1_9
+    21300020: Enviro_Tiles 1_10
+    21300022: Enviro_Tiles 1_11
+    21300024: Enviro_Tiles 1_12
+    21300026: Enviro_Tiles 1_13
+    21300028: Enviro_Tiles 1_14
+    21300030: Enviro_Tiles 1_15
+    21300032: Enviro_Tiles 1_16
+    21300034: Enviro_Tiles 1_17
+    21300036: Enviro_Tiles 1_18
+    21300038: Enviro_Tiles 1_19
+    21300040: Enviro_Tiles 1_20
+    21300042: Enviro_Tiles 1_21
+    21300044: Enviro_Tiles 1_22
+    21300046: Enviro_Tiles 1_23
+    21300048: Enviro_Tiles 1_24
+    21300050: Enviro_Tiles 1_25
+    21300052: Enviro_Tiles 1_26
+    21300054: Enviro_Tiles 1_27
+    21300056: Enviro_Tiles 1_28
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1408
+        width: 115
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ebcab1fdcd0294e914070cd0da1c66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_1
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1408
+        width: 127
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b620ed7fd3da34ca7702b4867f8c74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_2
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1455
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44310abb42bea07439d742aa72c823cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_3
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1287
+        width: 113
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 17.5, y: 50.5}
+        - {x: -0.5, y: 39.5}
+        - {x: -27.5, y: 39.5}
+        - {x: -38.5, y: 17.5}
+        - {x: -51.5, y: -0.5}
+        - {x: -45.5, y: -29.5}
+        - {x: -30.5, y: -39.5}
+        - {x: -4.5, y: -48.5}
+        - {x: 19.5, y: -38.5}
+        - {x: 42.5, y: -6.5}
+        - {x: 50.5, y: 15.5}
+        - {x: 40.5, y: 34.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051de00cb4449f6409f159d440a4142a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_4
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1300
+        width: 101
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -26.5, y: 36}
+        - {x: -39.5, y: 17}
+        - {x: -41.5, y: -15}
+        - {x: -15.5, y: -32}
+        - {x: 1.5, y: -41}
+        - {x: 17.5, y: -31}
+        - {x: 29.5, y: -34}
+        - {x: 44.5, y: 1}
+        - {x: 33.5, y: 24}
+        - {x: 4.5, y: 37}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b6efa6600f9ed48acfbcecb653acc1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_5
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1287
+        width: 120
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 15, y: 48}
+        - {x: -26, y: 48}
+        - {x: -41, y: 33}
+        - {x: -56, y: 4}
+        - {x: -48, y: -27}
+        - {x: -29, y: -49}
+        - {x: 41, y: -47}
+        - {x: 55, y: -5}
+        - {x: 44, y: 29}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630b246b6bdd9fc4d957999ba1afd8e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1052
+        width: 376
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -168, y: 97}
+        - {x: -168, y: -56}
+        - {x: 167, y: -56}
+        - {x: 167, y: 97}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e7b620870fceb4a8a4a2b41dbe40a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_7
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1047
+        width: 252
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -114, y: 100.5}
+        - {x: -114, y: -88.5}
+        - {x: 108, y: -88.5}
+        - {x: 108, y: 100.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66ca6fbe62a8c040bff732b3a8c1955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 902
+        width: 126
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -55, y: 53}
+        - {x: -55, y: -41}
+        - {x: 54, y: -41}
+        - {x: 54, y: 53}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cbfa5f77686cab408ef22e9ca388586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_9
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 767
+        width: 119
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a6ee8d7f89869469259f4fa48ca511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 117
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e522219cc8a11f14684e39879d07c233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_11
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 768
+        width: 105
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64aad09dcf3650488933e21b59c0f3e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 772
+        width: 259
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -115.5, y: 55.5}
+        - {x: -115.5, y: -26.5}
+        - {x: 118.5, y: -26.5}
+        - {x: 118.5, y: 55.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ad05f35a686db4ab9a769b9392bd85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 649
+        width: 125
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f7f9253db624542948baad28ad5b87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 648
+        width: 128
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f23e108006f30e429c84509d185ebfd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_15
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 512
+        width: 105
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ede6cacbe490d24e8bca317b869264d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 516
+        width: 124
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7c3cc6039d1d943ad289ac1b08b477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 516
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0dabcb10ae2234a9a9401a4ac6b726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_18
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 397
+        width: 109
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1224bb7fb8dc59c41857f8f7dfd24a80
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_19
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 255
+        width: 250
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948036adc46dc174980c14709bdbbe6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_20
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 261
+        width: 250
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1852d905ec0d3024bbc882ab5248b5f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_21
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 272
+        width: 109
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee0a041decad523429c6958dba4501b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_22
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 128
+        width: 122
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed74e472704989446b4d42ec70e002a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_23
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 127
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2952f92f7945d429f887c34f4e4b77
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_24
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1408
+        width: 115
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad272996ec824e4f87b6ee5af004b43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_25
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1282
+        width: 254
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3561d87f7ef7bda4baa8351362159dd2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_26
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1408
+        width: 125
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af8ab8e04c92964f977344767b4b7fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_27
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 512
+        width: 112
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019d4ea854f5f7443b23bfc907c866af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enviro_Tiles 1_28
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 512
+        width: 115
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac4d47d939fce245859335d56818c0c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 050c6a40ac16f1347a0ac63bdbe8f676
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

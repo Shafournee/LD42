@@ -211,11 +211,9 @@ E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.ParticleSystemModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.PerformanceReportingModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.Physics2DModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.PhysicsModule.dll
-E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.Purchasing.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.ScreenCaptureModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.SharedInternalsModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.SpatialTracking.dll
-E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.SpriteMaskModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.SpriteShapeModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.StandardEvents.dll
@@ -229,7 +227,6 @@ E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.Timeline.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.TimelineModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.TLSModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.UI.dll
-E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.UIAutomation.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.UIElementsModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.UIModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.UmbraModule.dll
@@ -244,7 +241,6 @@ E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.UnityWebRequestWWWModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.VehiclesModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.VideoModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.VRModule.dll
-E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.WebModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.WindModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.XRModule.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityScript.dll
@@ -256,13 +252,10 @@ E:\Unity Projects\LD42\Temp\bin\Debug\ExCSS.Unity.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\Unity.Legacy.NRefactory.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\Boo.Lang.Parser.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\Boo.Lang.Compiler.dll
-E:\Unity Projects\LD42\Temp\bin\Debug\Unity.UNetWeaver.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\Unity.IvyParser.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\Boo.Lang.PatternMatching.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\Boo.Lang.Useful.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\Unity.CecilTools.dll
-E:\Unity Projects\LD42\Temp\bin\Debug\Unity.Cecil.Pdb.dll
-E:\Unity Projects\LD42\Temp\bin\Debug\Unity.Cecil.Mdb.dll
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEditor.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.AIModule.xml
@@ -294,7 +287,6 @@ E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.PhysicsModule.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.Physics2DModule.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.ScreenCaptureModule.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.SharedInternalsModule.xml
-E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.SpriteMaskModule.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.SpriteShapeModule.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.StyleSheetsModule.xml
@@ -319,13 +311,11 @@ E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.UnityWebRequestWWWModule.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.VRModule.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.VehiclesModule.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.VideoModule.xml
-E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.WebModule.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.WindModule.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.XRModule.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.UI.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.Networking.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.Timeline.xml
-E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.UIAutomation.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.GoogleAudioSpatializer.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.HoloLens.xml
 E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
@@ -334,3 +324,13 @@ E:\Unity Projects\LD42\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
 E:\Unity Projects\LD42\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 E:\Unity Projects\LD42\obj\Debug\Assembly-CSharp.dll
 E:\Unity Projects\LD42\obj\Debug\Assembly-CSharp.pdb
+E:\Unity Projects\LD42\Temp\bin\Debug\Unity.TextMeshPro.dll
+E:\Unity Projects\LD42\Temp\bin\Debug\Unity.TextMeshPro.Editor.dll
+E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.FileSystemHttpModule.dll
+E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.LocalizationModule.dll
+E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.ProfilerModule.dll
+E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.StreamingModule.dll
+E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.FileSystemHttpModule.xml
+E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.LocalizationModule.xml
+E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.ProfilerModule.xml
+E:\Unity Projects\LD42\Temp\bin\Debug\UnityEngine.StreamingModule.xml

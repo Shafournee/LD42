@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField] GameObject canvas;
 
+    GameObject levelManager;
+
     GameObject restartText;
 
     [SerializeField] List<string> scenes;
@@ -87,8 +89,21 @@ public class GameManager : MonoBehaviour {
         yield return null;
         player = GameObject.FindGameObjectWithTag("Player");
         canvas = GameObject.FindGameObjectWithTag("Canvas");
+        levelManager = GameObject.FindGameObjectWithTag("LevelManager");
         restartText = canvas.transform.GetChild(0).gameObject;
         restartText.SetActive(false);
+        player.GetComponent<Player>().CheckJumpSpeed(GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>().isSpaceLevel);
+
+        //If you're in a space level, set the default gravity scale to .5
+        if (levelManager.GetComponent<LevelManager>().isSpaceLevel)
+        {
+            player.GetComponent<Rigidbody2D>().gravityScale = .5f;
+        }
+        else
+        {
+            player.GetComponent<Rigidbody2D>().gravityScale = 1.8f;
+        }
+
     }
 
     // This is how you load the next level
@@ -122,8 +137,6 @@ public class GameManager : MonoBehaviour {
             // Set ship sprite
             ship.GetComponent<SpriteRenderer>().sprite = shipSprites[z];
 
-            yield return null;
-
             z++;
 
             if(z > 19)
@@ -133,8 +146,8 @@ public class GameManager : MonoBehaviour {
 
             // Move ship to starting position
             float step = Time.deltaTime * 9f;
+            yield return new WaitForFixedUpdate();
             ship.transform.position = Vector3.MoveTowards(ship.transform.position, playerPos, step);
-            yield return null;
             // Check if ship is in starting pos, if so break out of loop
             if(ship.transform.position == playerPos)
             {
@@ -152,6 +165,7 @@ public class GameManager : MonoBehaviour {
 
         player.SetActive(true);
         player.GetComponent<PlayerAnimator>().walkingCoroutineRunning = false;
+        player.GetComponent<Player>().CheckJumpSpeed(GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>().isSpaceLevel);
     }
 
     public void CallEndingCutscene(Vector2 goalPos)
@@ -161,6 +175,7 @@ public class GameManager : MonoBehaviour {
 
     public IEnumerator EndingCutscene(Vector2 goalPos)
     {
+        // Calculate starting and ending positions for the animations
         goalPos = new Vector2(goalPos.x, goalPos.y);
         ship.transform.position = goalPos;
         player.SetActive(false);
@@ -184,8 +199,6 @@ public class GameManager : MonoBehaviour {
             // Set ship sprite
             ship.GetComponent<SpriteRenderer>().sprite = shipSprites[z];
 
-            yield return null;
-
             z++;
 
             if (z > 19)
@@ -195,8 +208,8 @@ public class GameManager : MonoBehaviour {
 
             // Move ship to starting position
             float step = Time.deltaTime * 9f;
+            yield return new WaitForFixedUpdate();
             ship.transform.position = Vector3.MoveTowards(ship.transform.position, finalPos, step);
-            yield return null;
             // Check if ship is in starting pos, if so break out of loop
             if (ship.transform.position == finalPos)
             {

@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class SpaceBall : MonoBehaviour {
 
+    GameObject levelManager;
+    GameObject player;
+
 	// Use this for initialization
 	void Start () {
-		
+        levelManager = GameObject.FindGameObjectWithTag("LevelManager");
 	}
 	
 	// Update is called once per frame
@@ -20,7 +23,16 @@ public class SpaceBall : MonoBehaviour {
     {
         if(collider.GetComponent<Player>() != null)
         {
-            collider.GetComponent<Rigidbody2D>().gravityScale = .5f;
+            if(levelManager.GetComponent<LevelManager>().isSpaceLevel)
+            {
+                collider.GetComponent<Player>().CheckJumpSpeed(false);
+                collider.GetComponent<Rigidbody2D>().gravityScale = 1.8f;
+            }
+            else
+            {
+                collider.GetComponent<Player>().CheckJumpSpeed(true);
+                collider.GetComponent<Rigidbody2D>().gravityScale = .5f;
+            }
         }
     }
 
@@ -28,7 +40,16 @@ public class SpaceBall : MonoBehaviour {
     {
         if (collider.GetComponent<Player>() != null)
         {
-            collider.GetComponent<Rigidbody2D>().gravityScale = 1;
+            if (levelManager.GetComponent<LevelManager>().isSpaceLevel)
+            {
+                collider.GetComponent<Player>().CheckJumpSpeed(true);
+                collider.GetComponent<Rigidbody2D>().gravityScale = .8f;
+            }
+            else
+            {
+                collider.GetComponent<Player>().CheckJumpSpeed(false);
+                collider.GetComponent<Rigidbody2D>().gravityScale = 1.8f;
+            }
         }
     }
 }
