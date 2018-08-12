@@ -22,7 +22,7 @@ public class Saw : MonoBehaviour {
 	void Update () {
         MoveToPoint();
 
-        transform.Rotate(Vector3.forward * Time.deltaTime * 15f);
+        transform.Rotate(-Vector3.forward * Time.deltaTime * 2000f);
 
     }
 

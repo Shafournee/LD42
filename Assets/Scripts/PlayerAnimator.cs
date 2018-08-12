@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour {
 
-    bool walkingCoroutineRunning;
+    public bool walkingCoroutineRunning;
 
     bool grounded;
     SpriteRenderer SpriteRenderer;

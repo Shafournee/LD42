@@ -16,5 +16,7 @@ public class Camera : MonoBehaviour {
         // Follow Player
         if(player != null)
             transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10f);
+
+        transform.GetChild(0).position = new Vector3(transform.position.x, transform.position.y, 0f);
 	}
 }

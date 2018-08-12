@@ -8,6 +8,9 @@ public class BlackHole : MonoBehaviour {
 
     GameObject Player;
 
+    [SerializeField] float ForceMultiplier = 40f;
+    [SerializeField] float ForceDivisor = 2f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -27,7 +30,7 @@ public class BlackHole : MonoBehaviour {
         {
             Vector2 dir = (transform.position - Player.transform.position);
 
-            Player.GetComponent<Rigidbody2D>().AddForce((dir * 40f)/(dir.magnitude * 2f));
+            Player.GetComponent<Rigidbody2D>().AddForce((dir * ForceMultiplier)/(dir.magnitude * ForceDivisor));
             print(dir.magnitude);
         }
     }

@@ -151,6 +151,7 @@ public class GameManager : MonoBehaviour {
         yield return null;
 
         player.SetActive(true);
+        player.GetComponent<PlayerAnimator>().walkingCoroutineRunning = false;
     }
 
     public void CallEndingCutscene(Vector2 goalPos)
