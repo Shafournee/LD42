@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour {
 
     int currentScene = 1;
 
+    bool endingMusic;
+
     private void Awake()
     {
 
@@ -56,12 +58,12 @@ public class GameManager : MonoBehaviour {
         StartCoroutine(StartingCutscene());
         audioSource = GetComponent<AudioSource>();
         levelManager = GameObject.FindGameObjectWithTag("LevelManager");
-
+        MusicPlayer();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        MusicPlayer();
+
         if (player == null)
         {
             if(restartText != null)
@@ -235,7 +237,7 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator PlayEndingCredits()
     {
-
+        endingMusic = true;
         GameObject credits = canvas.transform.GetChild(1).gameObject;
         yield return new WaitForSeconds(4f);
         canvas.transform.GetChild(2).gameObject.SetActive(true);
@@ -256,30 +258,73 @@ public class GameManager : MonoBehaviour {
         {
             float step = Time.deltaTime * 150f;
             yield return new WaitForFixedUpdate();
-            credits.GetComponent<RectTransform>().anchoredPosition = Vector3.MoveTowards(credits.GetComponent<RectTransform>().anchoredPosition, new Vector3(0f, 2385f, 0f), step);
-            if (credits.GetComponent<RectTransform>().anchoredPosition == new Vector2(0f, 2385f))
+            credits.GetComponent<RectTransform>().anchoredPosition = Vector3.MoveTowards(credits.GetComponent<RectTransform>().anchoredPosition, new Vector3(0f, 2253f, 0f), step);
+            if (credits.GetComponent<RectTransform>().anchoredPosition == new Vector2(0f, 2253f))
             {
                 shipIsMoving = false;
             }
         }
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(15f);
         SceneManager.LoadScene("TitleScreen");
     }
 
     void MusicPlayer()
     {
-        if(!audioSource.isPlaying)
+        while(true)
         {
-            if (!levelManager.GetComponent<LevelManager>().isSpaceLevel)
+            if (currentScene == 4)
             {
-                audioSource.clip = music[Random.Range(0, 5)];
+                audioSource.Stop();
+                while (currentScene == 4)
+                {
+                    audioSource.clip = music[4];
+                    if (!audioSource.isPlaying)
+                    {
+
+                        audioSource.Play();
+                    }
+
+                }
+            }
+            else if (currentScene == 9)
+            {
+                audioSource.Stop();
+                while (currentScene == 9)
+                {
+
+                }
+            }
+            else if(endingMusic)
+            {
+                audioSource.clip = music[9];
+                if (!audioSource.isPlaying)
+                {
+
+                    audioSource.Play();
+                }
             }
             else
             {
-                audioSource.clip = music[Random.Range(6, 10)];
+                while (audioSource.isPlaying || currentScene != 4 || currentScene != 9)
+                {
+                    if (!audioSource.isPlaying)
+                    {
+                        if (!levelManager.GetComponent<LevelManager>().isSpaceLevel)
+                        {
+                            audioSource.clip = music[Random.Range(0, 4)];
+                        }
+                        else
+                        {
+                            audioSource.clip = music[Random.Range(6, 9)];
+                        }
+                        audioSource.Play();
+                    }
+
+                }
             }
-            audioSource.Play();
+            
         }
+
     }
 }

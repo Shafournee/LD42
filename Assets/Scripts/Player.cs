@@ -20,7 +20,7 @@ public class Player : MonoBehaviour {
     //Player speed on ground
     float speed = 20f;
     //Player speed in air
-    float airSpeed = 5f;
+    float airSpeed = 10f;
     //Variable for trackin speed, whether on ground or in air
     float trueSpeed;
     //Variable for capping player speed

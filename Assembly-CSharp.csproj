@@ -63,10 +63,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BlackHole.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scripts\Editor Scripts\ObjectBuilderEditor.cs" />
+    <Compile Include="Assets\Scripts\Editor Scripts\PolygonColliderSnapper.cs" />
     <Compile Include="Assets\Scripts\Finish.cs" />
     <Compile Include="Assets\Scripts\Galaxy.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Goal.cs" />
+    <Compile Include="Assets\Scripts\JumpPad.cs" />
     <Compile Include="Assets\Scripts\KillArea.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Meteor.cs" />
@@ -77,6 +80,7 @@
     <Compile Include="Assets\Scripts\SpaceBall.cs" />
     <Compile Include="Assets\Scripts\SpeedBox.cs" />
     <Compile Include="Assets\Scripts\TitleScreen.cs" />
+    <Compile Include="Assets\Scripts\WhaleMoveScript.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/Unity Projects/LD42/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

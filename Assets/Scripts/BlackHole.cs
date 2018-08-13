@@ -19,7 +19,6 @@ public class BlackHole : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Suck();
-
         transform.Rotate(Vector3.forward * Time.deltaTime * 15f);
     }
 
@@ -31,7 +30,6 @@ public class BlackHole : MonoBehaviour {
             Vector2 dir = (transform.position - Player.transform.position);
 
             Player.GetComponent<Rigidbody2D>().AddForce((dir * ForceMultiplier)/(dir.magnitude * ForceDivisor));
-            print(dir.magnitude);
         }
     }
 
