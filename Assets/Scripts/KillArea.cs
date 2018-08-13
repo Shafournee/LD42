@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class KillArea : MonoBehaviour {
 
+    public bool specialMeteor;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -20,6 +22,10 @@ public class KillArea : MonoBehaviour {
         {
             Destroy(collider.gameObject);
 
+        }
+        if(specialMeteor && collider.gameObject.layer != 2 )
+        {
+            Destroy(gameObject);
         }
     }
 }

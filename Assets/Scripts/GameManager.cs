@@ -14,10 +14,14 @@ public class GameManager : MonoBehaviour {
     // Static instance of GameManager which allows it to be accessed by any other script.
     public static GameManager instance = null;
 
+    AudioSource audioSource;
+
     // Access to the player
     [SerializeField] GameObject player;
 
     [SerializeField] GameObject canvas;
+
+    [SerializeField] List<AudioClip> music;
 
     GameObject levelManager;
 
@@ -29,6 +33,8 @@ public class GameManager : MonoBehaviour {
 
     private void Awake()
     {
+
+        Application.targetFrameRate = 60;
         // Check if instance already exists
         if (instance == null)
         {
@@ -48,12 +54,15 @@ public class GameManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         StartCoroutine(StartingCutscene());
+        audioSource = GetComponent<AudioSource>();
+        levelManager = GameObject.FindGameObjectWithTag("LevelManager");
+
     }
 	
 	// Update is called once per frame
 	void Update () {
-
-		if(player == null)
+        MusicPlayer();
+        if (player == null)
         {
             if(restartText != null)
                 restartText.SetActive(true);
@@ -217,5 +226,60 @@ public class GameManager : MonoBehaviour {
             }
         }
         LoadNextLevel();
+    }
+
+    public void EndingCredits()
+    {
+        StartCoroutine(PlayEndingCredits());
+    }
+
+    IEnumerator PlayEndingCredits()
+    {
+
+        GameObject credits = canvas.transform.GetChild(1).gameObject;
+        yield return new WaitForSeconds(4f);
+        canvas.transform.GetChild(2).gameObject.SetActive(true);
+        shipIsMoving = true;
+        while (shipIsMoving)
+        {
+            float step = Time.deltaTime * 150f;
+            yield return new WaitForFixedUpdate();
+            credits.GetComponent<RectTransform>().anchoredPosition = Vector3.MoveTowards(credits.GetComponent<RectTransform>().anchoredPosition, new Vector3(0f, 0f, 0f), step);
+            if (credits.GetComponent<RectTransform>().anchoredPosition == new Vector2(0f, 0f))
+            {
+                shipIsMoving = false;
+            }
+        }
+
+        shipIsMoving = true;
+        while (shipIsMoving)
+        {
+            float step = Time.deltaTime * 150f;
+            yield return new WaitForFixedUpdate();
+            credits.GetComponent<RectTransform>().anchoredPosition = Vector3.MoveTowards(credits.GetComponent<RectTransform>().anchoredPosition, new Vector3(0f, 2385f, 0f), step);
+            if (credits.GetComponent<RectTransform>().anchoredPosition == new Vector2(0f, 2385f))
+            {
+                shipIsMoving = false;
+            }
+        }
+
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("TitleScreen");
+    }
+
+    void MusicPlayer()
+    {
+        if(!audioSource.isPlaying)
+        {
+            if (!levelManager.GetComponent<LevelManager>().isSpaceLevel)
+            {
+                audioSource.clip = music[Random.Range(0, 5)];
+            }
+            else
+            {
+                audioSource.clip = music[Random.Range(6, 10)];
+            }
+            audioSource.Play();
+        }
     }
 }

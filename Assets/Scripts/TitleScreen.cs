@@ -9,9 +9,9 @@ public class TitleScreen : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if(GameManager.instance != null)
+		if(GameManager.instance.gameObject != null)
         {
-            Destroy(GameManager.instance);
+            Destroy(GameManager.instance.gameObject);
         }
 	}
 	
@@ -28,7 +28,7 @@ public class TitleScreen : MonoBehaviour {
     public void Play()
     {
         // Load the first level
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level1");
     }
 
     public void Credits()

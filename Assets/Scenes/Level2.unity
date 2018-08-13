@@ -936,7 +936,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.05}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1519,7 +1519,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.05}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1531,10 +1531,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 13.071377, y: 3.134036}
-      - {x: 12.112637, y: -3.587963}
-      - {x: 18.880281, y: -4.3878593}
-      - {x: 19.521317, y: 2.3341465}
+    - - {x: 13, y: 2}
+      - {x: 13, y: -3}
+      - {x: 20, y: -3}
+      - {x: 20, y: 2}
 --- !u!1 &337206863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,6 +2279,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4201902206169060, guid: 58048d170fd8a0b49a92e9d9a0329111, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201902206169060, guid: 58048d170fd8a0b49a92e9d9a0329111, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58048d170fd8a0b49a92e9d9a0329111, type: 2}
   m_IsPrefabAsset: 0
@@ -2367,11 +2375,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4306577537932192, guid: 417522aa272af1240b9a7f29af85cf59, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.49
+      value: -5.453
       objectReference: {fileID: 0}
     - target: {fileID: 4306577537932192, guid: 417522aa272af1240b9a7f29af85cf59, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.64
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 4306577537932192, guid: 417522aa272af1240b9a7f29af85cf59, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2623,27 +2631,27 @@ Prefab:
     - target: {fileID: 60310893444786172, guid: b6596814383280a43a24cea289517d93,
         type: 2}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
-      value: -0.20335436
+      value: 0.6257665
       objectReference: {fileID: 0}
     - target: {fileID: 60310893444786172, guid: b6596814383280a43a24cea289517d93,
         type: 2}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
-      value: 0.9621984
+      value: 0.95815384
       objectReference: {fileID: 0}
     - target: {fileID: 60310893444786172, guid: b6596814383280a43a24cea289517d93,
         type: 2}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
-      value: 0.23822713
+      value: 0.7923219
       objectReference: {fileID: 0}
     - target: {fileID: 60310893444786172, guid: b6596814383280a43a24cea289517d93,
         type: 2}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
-      value: 0.18092597
+      value: 0.23754871
       objectReference: {fileID: 0}
     - target: {fileID: 60310893444786172, guid: b6596814383280a43a24cea289517d93,
         type: 2}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: 1.0441492
+      value: 1.1857059
       objectReference: {fileID: 0}
     - target: {fileID: 60310893444786172, guid: b6596814383280a43a24cea289517d93,
         type: 2}
